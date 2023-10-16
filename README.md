@@ -2,10 +2,14 @@
 
 To deploy the app:
 
+## The old way
+
 ```shell
 minikube tunnel
-k apply -f . 
+k apply -f files/ 
 ```
+
+## With argocd
 
 To access to argocd dashboard at https://localhost:8081/:
 
@@ -16,3 +20,6 @@ k port-forward svc/argocd-server -n argocd 8081:443
 argocd admin initial-password -n argocd
 ```
 
+```shell
+k apply -f demo-application.yaml
+```
