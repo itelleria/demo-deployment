@@ -9,6 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: kustomize-guestbook
-    repoURL: https://github.com/argoproj/argocd-example-apps.git
+    path: demo
+    repoURL: https://github.com/itelleria/demo-deployment.git
     targetRevision: HEAD
