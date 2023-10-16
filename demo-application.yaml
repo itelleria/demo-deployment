@@ -9,6 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: demo
+    path: files
     repoURL: https://github.com/itelleria/demo-deployment.git
     targetRevision: HEAD
