@@ -6,16 +6,17 @@ images:
     newTag: "4.0"
 
 resources:
-  - base/deployment.yaml
-  - base/service.yaml
+  - ../../base
 
 configMapGenerator:
   - name: database
+    behavior: merge
     literals:
-      - database-url="jdbc:url-to-database"
-      - database-username="username-database"
+      - database-url="jdbc:url-to-database-dev"
+      - database-username="username-database-dev"
 
 secretGenerator:
   - name: database
+    behavior: merge
     literals:
-      - database-password="password-database"
+      - database-password="password-database-dev"
