@@ -20,5 +20,6 @@ spec:
       containers:
       - image: itelleria/demo:1.0
         name: demo
-        resources: {}
-status: {}
+        envFrom:
+          - configMapRef:
+              name: database
