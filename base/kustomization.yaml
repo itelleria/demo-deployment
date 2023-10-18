@@ -8,7 +8,7 @@ images:
 resources:
   - deployment.yaml
   - service.yaml
-  - ../argocd/end-to-end-tests-postsync-hook.yaml
+  - end-to-end-tests-postsync-hook.yaml
 
 configMapGenerator:
   - name: database
