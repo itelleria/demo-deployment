@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+
+# This hook is a Job but it can be a Pod or an Argo Workflow
+kind: Job
+
+metadata:
+  generateName: end-to-end-tests-hook-
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+        - name: end-to-end-tests-hook
+          image: curlimages/curl
+          command:
+            - "echo"
+            - "triggering a jenkins job to execute e2e tests"
+      restartPolicy: Never
+  backoffLimit: 2
